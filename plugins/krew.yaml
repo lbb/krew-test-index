@@ -6,11 +6,12 @@ spec:
   platforms:
   - uri: https://storage.googleapis.com/krew-test-index/krew.zip
     sha256: 72e70e01e70c9d08b0cd52ab89d98e5bea325ca944e1a2a1c3a185a02fea6075
+    bin: "kubectl-krew"
     files:
     - from: "out/build/unix/plugin.yaml"
       to: "plugin.yaml"
     - from: "out/build/krew-darwin"
-      to: "krew"
+      to: "kubectl-krew"
     - from: "out/build/unix/commands/*"
       to: "commands"
     selector:
