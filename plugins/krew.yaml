@@ -1,0 +1,20 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: krew
+spec:
+  platforms:
+  - uri: https://storage.googleapis.com/krew-test-index/krew.zip
+    sha256: 72e70e01e70c9d08b0cd52ab89d98e5bea325ca944e1a2a1c3a185a02fea6075
+    files:
+    - from: "out/build/unix/plugin.yaml"
+      to: "plugin.yaml"
+    - from: "out/build/krew-darwin"
+      to: "krew"
+    - from: "out/build/unix/commands/*"
+      to: "commands"
+    selector:
+      matchExpressions:
+      - {key: os, operator: In, values: [darwin]}
+  version: "v0.2.0-alpha.1"
+  shortDescription: Install plugins
