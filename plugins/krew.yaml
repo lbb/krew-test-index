@@ -4,8 +4,8 @@ metadata:
   name: krew
 spec:
   platforms:
-  - uri: https://storage.googleapis.com/krew-test-index/krew.zip
-    sha256: 72e70e01e70c9d08b0cd52ab89d98e5bea325ca944e1a2a1c3a185a02fea6075
+  - uri: https://storage.googleapis.com/krew-test-index/krew-4eafe38574b8ba1ec458c8043d62556c034abc4376b1118f5c4e7dee66450acc.zip
+    sha256: 4eafe38574b8ba1ec458c8043d62556c034abc4376b1118f5c4e7dee66450acc
     bin: "kubectl-krew"
     files:
     - from: "out/build/unix/plugin.yaml"
